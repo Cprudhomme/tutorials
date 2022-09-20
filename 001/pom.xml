@@ -14,7 +14,7 @@
 	<name>springTutorial</name>
 	<description>Tutorial for  Spring Boot web application</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
