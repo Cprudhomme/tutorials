@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Developing a web application with Spring boot</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script  src="home.js" ></script>
+</head>
+<body>
+    <h1> Developing a web application with Spring boot</h1>
+
+
+    <section>
+        <form th:action="@{/data}" method="post">
+            <input type="submit" value="Get data from the server" />
+        </form>
+    </section>
+
+    <section>
+        <div id="progressbarDiv">
+            <p id="progress-content">progress message</p>
+            <div class="w3-light-grey w3-round">
+                <div id="progressbar" class="w3-container w3-round w3-blue" style="width:0%">0%</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p th:if="${message}" th:text="${message}"/>
+        <p th:if="${id}" th:text="'ID:'+${id}+ ' Name:'+${name}"/>
+    </section>
+</body>
+</html>
